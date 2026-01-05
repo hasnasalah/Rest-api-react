@@ -27,6 +27,10 @@ export interface NativeNameValue {
 export interface NativeNames {
   [Code: string]: NativeNameValue;
 }
+export interface currencies{
+  code:string;
+  name: string;
+}
 
 export interface CountryFlags {
   svg: string;
@@ -42,9 +46,7 @@ export interface Country {
   capital?: string[];
   cca3:string;
 }
-export interface currencies{
-  name: string;
-}
+
 
 export interface CountryDetails extends Country{
 nativeName:NativeNames;

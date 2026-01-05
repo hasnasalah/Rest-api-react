@@ -32,6 +32,7 @@ export function CountryDetails(){
 const onClickBack=()=>{
 navigate("/home");
 }
+
     return(
     <main id="country-modal-page">
       <Header/>
@@ -74,12 +75,14 @@ navigate("/home");
                 {country.tld}
              </p>
              <p>
+                
                 <strong>Currencies: </strong>
-                {country.currencies.name?Object.values(country.currencies.name).join(","):"N/A"}
+                {country.currencies ? Object.values(country.currencies).map((cur) => cur.name).join(", ") : ""}
+                    
              </p>
               <p>
                 <strong>Languages: </strong>
-                {country.languages ? Object.values(country.languages).join(", ") : "N/A"}
+                {country.languages?Object.values(country.languages).join(", "):"N/A"}
               </p>
            </div>
            <div id="info-c">
