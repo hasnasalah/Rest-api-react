@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# Frontend Mentor - REST Countries API with color theme switcher solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Setup]
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Overview
+A responsive web application that displays country data with detailed information and interactive features such as search, region filtering, dark mode, and border navigation this is refactored project from Vanilla Javascript into React and typescript.  
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### The challenge
 
-## Expanding the ESLint configuration
+- **Country Listing**: Shows a list of country cards with flags, name, population, region, and capital.  
+- **Search**: Search for countries by name using the input field.  
+- **Filter by Region**: Select a region from a dropdown to filter countries.  
+- **Country Details Modal**: Click on a country card to open a modal with:
+  - Full country name  
+  - Native name  
+  - Population, region, sub-region, and capital  
+  - Top-level domain, currencies, languages  
+  - Bordering countries with a clickable buttons.
+- **Dark Mode**: Toggle between light and dark themes.  
+- **Responsive Design**: Works on desktops, tablets, and mobile devices. 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Screenshot
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![](./screenshot/Screenshot%202025-11-26%20162310.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+![](./screenshot/Screenshot%202025-11-26%20162503.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## My process
+
+### Built with
+
+* Built with
+* React
+* TypeScript
+* Vite
+* React Router
+* Semantic HTML5
+* CSS custom properties
+* Flexbox & CSS Grid
+
+### What I learned
+
+* Refactoring a vanilla JavaScript project to React
+* Structuring components and pages.
+* Using React Router for dynamic country routes
+* Mapping complex objects (currencies, languages, borders) with typescript interfaces
+* Implementing dark mode using CSS variables and context Hook
+* Separating data logic from UI components
+* using costum Hooks like useFetch to fetch data dynamicly and useLocalStorage 
+
+
+### Continued development
+* Improve accessibility (keyboard navigation, ARIA labels)
+* Add smooth transitions when opening and closing the modal
+
+### Useful esources:
+* [Vite](https://vitejs.dev/) – Bundler and build tool
+* [TypeScript](https://www.typescriptlang.org/) –Typescript
+* [REST Countries API](https://restcountries.com/) – Country data source
+* [[React Icons](https://react-icons.github.io/react-icons/)]
+* [CSS-Tricks Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) – Layout reference
+* [CSS-Tricks Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/) – Grid reference
+* [MDN Web Docs](https://developer.mozilla.org/) – JavaScript & DOM references
+* [Vercel](https://vercel.com/) – Deployment platform
+* [Medium](https://medium.com/geekculture/accessing-data-inside-nested-data-structures-in-javascript-an-example-21c5ea1372e3) netsed Objects
+* [youtube](https://www.youtube.com/watch?v=VU0BQnuPfwc) maping nested objects
+* [Objects](https://javascript.info/keys-values-entries#transforming-objects)
+
+
+## setup
+**Clone the repository**:
+
+```bash
+git clone https://github.com/hasnasalah/Rest-api-react
+npm run dev
+
 ```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Author
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Website - [Hasna Ben Jillali](https://rest-countries-rho-eosin.vercel.app/)
+
+
