@@ -50,7 +50,7 @@ return (
    </section>
    
    <ul className="countries-grid">
-   {filteredCountries?.map(country=> <Link to={`/country/${country.name.common}`} key={country.name.common}> <CountryCard  
+   {filteredCountries?.map(country=> <Link to={`/country/${country.name.common}`} key={country.name.common} style={{textDecoration: "none", color: "inherit"}}> <CountryCard  
    name={country.name} flags={country.flags}
     region={country.region} population={country.population} 
     capital={country.capital}/></Link>)}
