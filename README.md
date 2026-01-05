@@ -95,6 +95,6 @@ npm run dev
 
 ## Author
 
-- Website - [Hasna Ben Jillali](https://rest-countries-rho-eosin.vercel.app/)
+- Website - [Hasna Ben Jillali](https://rest-api-react-4pfq3uww3-hasna-ben-jillalis-projects.vercel.app/home)
 
 
