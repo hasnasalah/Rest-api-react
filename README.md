@@ -34,9 +34,9 @@ A responsive web application that displays country data with detailed informatio
 
 ### Screenshot
 
-![](./screenshot/Screenshot%202025-11-26%20162310.png)
+![](./screenshot/pic1.png)
 
-![](./screenshot/Screenshot%202025-11-26%20162503.png)
+![](./screenshot/pic2.png)
 
 ## My process
 
@@ -95,6 +95,6 @@ npm run dev
 
 ## Author
 
-- Website - [Hasna Ben Jillali](https://rest-api-react-4pfq3uww3-hasna-ben-jillalis-projects.vercel.app/home)
+- Website - [Hasna Ben Jillali](https://rest-api-react-sigma.vercel.app/)
 
 
