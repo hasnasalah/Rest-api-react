@@ -16,7 +16,7 @@ export default function HomePage(){
     const navigate = useNavigate();
     const [SearchError,setSeachError]=useState("");
     const [selectedRegion, setSelectedRegion] = useState<region | "">("");
-    const countryUrl="https://restcountries.com/v3.1/all?fields=name,population,capital,region,flags";
+    const countryUrl="https://restcountries.com/v3.1/all?fields=cca3,name,population,capital,region,flags";
     const { data, isLoading, error } =useFetch<Country[]>(countryUrl);
     if(isLoading) return <LoadingSpinner/>;
     if (error) return (<ErrorMessage message={error.message}/>);
@@ -44,10 +44,12 @@ export default function HomePage(){
 return (
    <>
    <Header/>
+   <section id="search-section">
    <SearchBar handeleSubmit={handeleSearch} error={SearchError}/>
    <RegionFilter onFilterChange={handeleFilterByRegion}/>
+   </section>
    
-   <ul className="countries-grid" style={{display:"grid"}}>
+   <ul className="countries-grid">
    {filteredCountries?.map(country=> <Link to={`/country/${country.name.common}`} key={country.name.common}> <CountryCard  
    name={country.name} flags={country.flags}
     region={country.region} population={country.population} 

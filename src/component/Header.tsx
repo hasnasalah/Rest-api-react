@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 import  { FiSun, FiMoon } from "react-icons/fi";
+import "../App.css";
 
 
 
@@ -13,16 +14,9 @@ export default function Header(){
         </div>
          <button
       onClick={toggleTheme}
-      style={{
-        margin: "20px 0",
-        padding: "10px 20px",
-       background: theme === 'light' ? 'white' : 'hsl(207, 26%, 17%)', 
-       color: theme === 'light' ? 'hsl(200, 15%, 8%)' : 'white',
-        border: "none",
-        borderRadius: "5px",
-      }}
+      
     >
-     {theme === "light" ? <FiMoon size={18} /> : <FiSun size={18} />}
+     {theme === "light" ? <FiMoon size={18} className="fi-icon"/> : <FiSun size={18} className="fi-icon" />}
       Switch to {theme === "light" ? "Dark" : "Light"} Mode
     </button>
     </header>

@@ -43,6 +43,9 @@ header button {
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.fi-icon{
+  padding-right: 0.6em;
+}
 #search-section {  
   display: flex;
   justify-content: space-between;
@@ -143,13 +146,20 @@ ul p {
   margin: 0 1rem 0.5rem 1rem;
   font-size: 0.95rem;
 }
-.modal{
+#country-modal{
   margin:50px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
 }
+
 .close-btn {
   background-color: var(--secondary-color);
   color: var(--text-color);
+  margin-top:20px;
+  margin-left: 20px;
   border: none;
+  display:flex;
   cursor: pointer;
   width:120px;
   padding: 0.6rem 1.2rem;   
@@ -160,12 +170,8 @@ ul p {
   align-items: center;
   justify-content: center;
 }
-#country-modal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin: 50px;
-}
+
+ 
 
 
 #image-container { 

@@ -5,7 +5,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 const ThemeContext=createContext<ThemeProps|undefined>(undefined);
 
 export const ThemeProvider=({children}:Childern)=>{
-  const [theme, setTheme] = useLocalStorage('theme','light');
+  const [theme, setTheme] = useLocalStorage<'light'|'dark'>('theme','light');
   const toggleTheme = () => setTheme(t => (t === 'light' ? 'dark' : 'light'));
   useEffect(() => {
    document.body.classList.toggle("dark", theme === "dark");

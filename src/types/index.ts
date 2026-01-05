@@ -25,7 +25,7 @@ export interface NativeNameValue {
   common: string;
 }
 export interface NativeNames {
-  [languageCode: string]: NativeNameValue;
+  [Code: string]: NativeNameValue;
 }
 
 export interface CountryFlags {
@@ -40,6 +40,7 @@ export interface Country {
   population: number;
   region: string;
   capital?: string[];
+  cca3:string;
 }
 export interface currencies{
   name: string;
@@ -49,7 +50,8 @@ export interface CountryDetails extends Country{
 nativeName:NativeNames;
 languages:string[];
 subregion?: string; 
-border:string[];
+borders:string[];
+currencies:currencies;
 tld:string;
 
 }
@@ -59,4 +61,7 @@ export interface CountryCardProps {
   population: number;
   region: string;
   capital?: string[];
+}
+export interface BorderBtnProps{
+  countryName:string|undefined;
 }
