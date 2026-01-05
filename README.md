@@ -85,6 +85,8 @@ A responsive web application that displays country data with detailed informatio
 
 ```bash
 git clone https://github.com/hasnasalah/Rest-api-react
+cd REST-Countries-API
+npm install
 npm run dev
 
 ```
